@@ -16,6 +16,7 @@
 		01D15DE81A8A60620046F649 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D15DE41A8A60620046F649 /* StarButton.swift */; };
 		01D15DE91A8A60620046F649 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D15DE51A8A60620046F649 /* Paths.swift */; };
 		01D15DEA1A8A60620046F649 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D15DE61A8A60620046F649 /* Extensions.swift */; };
+		27ECFFE41C3952B5007B3601 /* StarButton.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 27ECFFE31C3952B5007B3601 /* StarButton.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		01D15DE41A8A60620046F649 /* StarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		01D15DE51A8A60620046F649 /* Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		01D15DE61A8A60620046F649 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		27ECFFE31C3952B5007B3601 /* StarButton.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StarButton.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		01D15DB51A8A60240046F649 = {
 			isa = PBXGroup;
 			children = (
+				27ECFFE31C3952B5007B3601 /* StarButton.podspec */,
 				01D15DC01A8A60240046F649 /* StarBounce */,
 				01D15DD61A8A60240046F649 /* StarBounceTests */,
 				01D15DBF1A8A60240046F649 /* Products */,
@@ -203,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ECFFE41C3952B5007B3601 /* StarButton.podspec in Resources */,
 				01D15DC91A8A60240046F649 /* Main.storyboard in Resources */,
 				01D15DCE1A8A60240046F649 /* LaunchScreen.xib in Resources */,
 				01D15DCB1A8A60240046F649 /* Images.xcassets in Resources */,
