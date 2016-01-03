@@ -113,7 +113,7 @@ class StarButton: UIButton {
             starFrame.size.height = CGRectGetHeight(starFrame)/2.5
             
             starShape = CAShapeLayer()
-            starShape.path = CGPath.rescaleForFrame(path: Paths.star, frame: starFrame)
+            starShape.path = CGPath.rescaleForFrame(path: Paths.heart, frame: starFrame)
             starShape.bounds = CGPathGetBoundingBox(starShape.path)
             starShape.fillColor = notFavoriteColor.CGColor
             starShape.position = CGPoint(x: CGRectGetWidth(CGPathGetBoundingBox(outerRingShape.path))/2, y: CGRectGetHeight(CGPathGetBoundingBox(outerRingShape.path))/2)

@@ -58,7 +58,31 @@ struct Paths {
         swiftPath.addCurveToPoint(CGPointMake(376.2, 283.2), controlPoint1: CGPointMake(384.9, 338.4), controlPoint2: CGPointMake(385, 308))
         return swiftPath.CGPath
     }
-    
+
+    static var heart: CGPath {
+
+        let scaleFactor: CGFloat = 2.0
+        
+        let smallRadius: CGFloat = 5.0   * scaleFactor
+        let bigRadius:   CGFloat = 20.0  * scaleFactor
+        let h: CGFloat = 170  * scaleFactor
+        let w: CGFloat = 145  * scaleFactor
+        let h2 = h * 0.4
+        
+        let heartPath = CGPathCreateMutable()
+        CGPathMoveToPoint(  heartPath, nil, -w * 0.25, -h * 0.25)
+        
+        CGPathAddArcToPoint(heartPath, nil, -w, -h,  0, -h2, bigRadius)
+        CGPathAddArcToPoint(heartPath, nil,  0, -h2, w, -h,  1.0)
+        CGPathAddArcToPoint(heartPath, nil,  w, -h,  0,  0,  bigRadius)
+        CGPathAddArcToPoint(heartPath, nil,  0,  0, -w, -w,  smallRadius)
+        
+        CGPathCloseSubpath(heartPath)
+        
+        return heartPath
+        
+    }
+
     static func circle(inFrame: CGRect) -> CGPath {
         let circle = UIBezierPath(ovalInRect: inFrame)
         return circle.CGPath
