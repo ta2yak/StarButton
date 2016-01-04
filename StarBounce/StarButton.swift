@@ -10,7 +10,7 @@ import UIKit
 import QuartzCore
 
 @IBDesignable
-class StarButton: UIButton {
+public class StarButton: UIButton {
     
     private var starShape: CAShapeLayer!
     private var outerRingShape: CAShapeLayer!
@@ -21,34 +21,34 @@ class StarButton: UIButton {
     private let notFavoriteKey = "NOTFAVORITE"
     
     @IBInspectable
-    var lineWidth: CGFloat = 1 {
+    public var lineWidth: CGFloat = 1 {
         didSet {
             updateLayerProperties()
         }
     }
     
     @IBInspectable
-    var favoriteColor: UIColor = UIColor(hex:"eecd34") {
+    public var favoriteColor: UIColor = UIColor(hex:"eecd34") {
         didSet {
             updateLayerProperties()
         }
     }
     
     @IBInspectable
-    var notFavoriteColor: UIColor = UIColor(hex:"9e9b9b") {
+    public var notFavoriteColor: UIColor = UIColor(hex:"9e9b9b") {
         didSet {
             updateLayerProperties()
         }
     }
     
     @IBInspectable
-    var starFavoriteColor: UIColor = UIColor(hex:"9e9b9b") {
+    public var starFavoriteColor: UIColor = UIColor(hex:"9e9b9b") {
         didSet {
             updateLayerProperties()
         }
     }
     
-    var isFavorite : Bool = false {
+    public var isFavorite : Bool = false {
         didSet {
             if self.isFavorite {
                 favorite()
@@ -77,7 +77,7 @@ class StarButton: UIButton {
         }
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         createLayersIfNeeded()
         updateLayerProperties()
@@ -218,7 +218,7 @@ class StarButton: UIButton {
         fillRingShape.transform = CATransform3DIdentity
     }
     
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    override public func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if let key = anim.valueForKey(starKey) as? String {
             switch(key) {
             case (favoriteKey):
@@ -270,7 +270,7 @@ class StarButton: UIButton {
         CATransaction.commit()
     }
     
-    override func animationDidStart(anim: CAAnimation) {
+    override public func animationDidStart(anim: CAAnimation) {
         disableTouch()
     }
     
