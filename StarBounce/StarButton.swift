@@ -77,12 +77,6 @@ public class StarButton: UIButton {
         }
     }
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        createLayersIfNeeded()
-        updateLayerProperties()
-    }
-    
     private func createLayersIfNeeded() {
         if fillRingShape == nil {
             fillRingShape = CAShapeLayer()
@@ -128,6 +122,10 @@ public class StarButton: UIButton {
     }
     
     private func notFavorite(){
+        
+        createLayersIfNeeded()
+        updateLayerProperties()
+        
         let starFillColor = CABasicAnimation(keyPath: "fillColor")
         starFillColor.toValue = notFavoriteColor.CGColor
         starFillColor.duration = 0.3
@@ -162,6 +160,10 @@ public class StarButton: UIButton {
     }
     
     private func favorite(){
+        
+        createLayersIfNeeded()
+        updateLayerProperties()
+        
         var starGoUp = CATransform3DIdentity
         starGoUp = CATransform3DScale(starGoUp, 1.5, 1.5, 1.5)
         var starGoDown = CATransform3DIdentity
