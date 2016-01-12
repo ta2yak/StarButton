@@ -23,6 +23,7 @@ public class StarButton: UIButton {
     @IBInspectable
     public var lineWidth: CGFloat = 1 {
         didSet {
+            createLayersIfNeeded()
             updateLayerProperties()
         }
     }
@@ -30,6 +31,7 @@ public class StarButton: UIButton {
     @IBInspectable
     public var favoriteColor: UIColor = UIColor(hex:"eecd34") {
         didSet {
+            createLayersIfNeeded()
             updateLayerProperties()
         }
     }
@@ -37,6 +39,7 @@ public class StarButton: UIButton {
     @IBInspectable
     public var notFavoriteColor: UIColor = UIColor(hex:"9e9b9b") {
         didSet {
+            createLayersIfNeeded()
             updateLayerProperties()
         }
     }
@@ -44,6 +47,7 @@ public class StarButton: UIButton {
     @IBInspectable
     public var starFavoriteColor: UIColor = UIColor(hex:"9e9b9b") {
         didSet {
+            createLayersIfNeeded()
             updateLayerProperties()
         }
     }
